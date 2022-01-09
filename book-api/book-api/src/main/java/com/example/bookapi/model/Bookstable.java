@@ -6,31 +6,25 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Book {
+public class Bookstable {
     @Id
     private String titulo;
     private String autor;
     private String categoria;
     private String precio;
-    private String imgUrl;
+    //TODO revisar tipo del imgUrl
+
 
     //Sin imagen
-    public Book(String titulo, String autor, String categoria, String precio) {
+    public Bookstable(String titulo, String autor, String categoria, String precio) {
         this.titulo = titulo;
         this.autor = autor;
         this.categoria = categoria;
         this.precio = precio;
     }
 
-    public Book(String titulo, String autor, String categoria, String precio, String imgUrl) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.categoria = categoria;
-        this.precio = precio;
-        this.imgUrl = imgUrl;
-    }
 
-    public Book() {
+    public Bookstable() {
 
     }
 
@@ -66,13 +60,7 @@ public class Book {
         this.precio = precio;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
-    }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
     @Override
     public String toString() {
         return "Book{" +
@@ -80,7 +68,6 @@ public class Book {
                 ", autor='" + autor + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", precio='" + precio + '\'' +
-                ", imgUrl='" + imgUrl + '\'' +
                 '}';
     }
 }
