@@ -2,6 +2,7 @@ package com.example.bookapi.model;
 
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.awt.print.Book;
 import java.util.List;
 
@@ -16,11 +17,31 @@ public class BookService {
     public List<Bookstable> getBooks() {
         return bookRepository.findAll();
     }
-    public void addBook(Bookstable book){
-        if(!bookRepository.findBookByTitle(book.getTitulo()).isPresent()){
+
+    public void addBook(Bookstable book) {
+        if (bookRepository.findBookByTitle(book.getTitulo()).isPresent()) {
             throw new IllegalStateException("This book already exists.");
-        }else{
+        } else {
             bookRepository.save(book);
+        }
+    }
+
+    @Transactional
+    public void editBook(String titulo, String autor, String categoria, String precio, String imgUrl) {
+        if (bookRepository.findBookByTitle(titulo).isPresent()) {
+            Bookstable book = bookRepository.findBookByTitle(titulo).get();
+            if (autor != null && autor.length() >= 3) {
+                book.setAutor(autor);
+            }
+            if (categoria != null && categoria.length() >= 3) {
+                book.setCategoria(categoria);
+            }
+            if (precio != null && precio.length() >= 3) {
+                book.setPrecio(precio);
+            }
+            if (imgUrl != null && imgUrl.length() >= 3) {
+                book.setImgUrl(imgUrl);
+            }
         }
     }
 }

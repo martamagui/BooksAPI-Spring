@@ -14,12 +14,26 @@ public class BookController {
     public BookController(BookService bookService) {
         this.bookService = bookService;
     }
+
     @GetMapping
-    public List<Bookstable> getBooks(){
+    public List<Bookstable> getBooks() {
         return bookService.getBooks();
     }
+
     @PostMapping
-    public void addBook(@RequestBody Bookstable bookstable){
+    public void addBook(@RequestBody Bookstable bookstable) {
         bookService.addBook(bookstable);
     }
+
+    @PutMapping(path="{titulo}")
+    public void editBook(@PathVariable("titulo") String titulo,
+                         @RequestParam(required = false) String autor,
+                         @RequestParam(required = false) String categoria,
+                         @RequestParam(required = false) String precio,
+                         @RequestParam(required = false) String imgurl
+                         ) {
+        bookService.editBook(titulo, autor, categoria, precio, imgurl);
+
+    }
+    
 }

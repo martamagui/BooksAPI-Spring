@@ -8,4 +8,6 @@ import java.util.Optional;
 public interface BookRepository extends JpaRepository<Bookstable,String> {
     @Query("SELECT s FROM Bookstable s WHERE s.titulo=?1")
     Optional<Bookstable> findBookByTitle(String titulo);
+
+
 }
