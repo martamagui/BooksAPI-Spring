@@ -10,10 +10,10 @@ USE books;
 DROP TABLE IF EXISTS bookstable;
 CREATE TABLE `bookstable` (
   `titulo` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
-  `autor` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `autor` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `categoria` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
   `precio` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
-  `imgUrl` text COLLATE latin1_spanish_ci DEFAULT NULL,
+  `imgUrl` varchar(255)  COLLATE latin1_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`Titulo`)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1 COLLATE = latin1_spanish_ci;
 INSERT INTO

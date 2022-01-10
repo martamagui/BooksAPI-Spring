@@ -12,8 +12,15 @@ public class Bookstable {
     private String autor;
     private String categoria;
     private String precio;
-    //TODO revisar tipo del imgUrl
+    private String imgUrl;
 
+    public Bookstable(String titulo, String autor, String categoria, String precio, String imgUrl) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.categoria = categoria;
+        this.precio = precio;
+        this.imgUrl = imgUrl;
+    }
 
     //Sin imagen
     public Bookstable(String titulo, String autor, String categoria, String precio) {
@@ -59,15 +66,22 @@ public class Bookstable {
     public void setPrecio(String precio) {
         this.precio = precio;
     }
+    public String getImgUrl() {
+        return imgUrl;
+    }
 
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Bookstable{" +
                 "titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", precio='" + precio + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
                 '}';
     }
 }
