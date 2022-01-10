@@ -1,3 +1,4 @@
+USE books;
 INSERT INTO
   bookstable(titulo, autor, categoria, precio, imgUrl)
 VALUES(
@@ -66,4 +67,72 @@ VALUES(
     'Arte',
     '18.95',
     'https://images-na.ssl-images-amazon.com/images/I/81tjEWZ8t7L.jpg'
-  );
+  ),(
+    'El Libro Negro de las Horas',
+    'Eva García Sáenz de Urturi',
+    'Thriller',
+    '19.85',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/c1/79/6e/7240129/1540-1.jpg'
+  ),(
+    'Las otras niñas',
+    'Santiago Díaz',
+    'Thriller',
+    '18.90',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/bd/5a/6d/7166653/1540-1.jpg'
+  ),(
+    'Madrid era una fiesta',
+    'Pedro Herrasti',
+    'Thriller',
+    '23.75',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/38/14/6f/7279672/1540-1.jpg'
+  ),(
+    'Una Familia No Tan Feliz',
+    'Shari Lapena',
+    'Thriller',
+    '19.85',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/bf/5a/6d/7166655/1540-1.jpg'
+  ),(
+    'La noche más oscura',
+    'Robert Bryndza',
+    'Thriller',
+    '17.00',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/6a/a2/6f/7316074/1540-1.jpg'
+  ),(
+    'Para morir en la orilla',
+    'José Luis Correa',
+    'Thriller',
+    '15.68',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/fe/50/6f/7295230/1540-1.jpg'
+  ),(
+    'Expuestos al peligro',
+    'Viveca Sten',
+    'Thriller',
+    '20.18',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/00/5f/6f/7298816/1540-1.jpg'
+  ),(
+    'El lector fiel',
+    'Max Seeck',
+    'Thriller',
+    '20.81',
+    'https://static.fnac-static.com/multimedia/Images/ES/NR/f0/51/6f/7295472/1540-1.jpg'
+  ),
+  (
+      'El ciclo del eterno emperador',
+      'Laura Gallego',
+      'Juvenil',
+      '16.10',
+      'https://static.fnac-static.com/multimedia/Images/ES/NR/3a/91/69/6918458/1540-1.jpg'
+  ),
+  (
+      'El reino de los malditos',
+      'Kerri Maniscalco',
+      'Juvenil',
+      '15.68',
+      'https://static.fnac-static.com/multimedia/Images/ES/NR/1a/55/6f/7296282/1540-1.jpg'
+  ),
+  (
+      'Todas mis ilusiones',
+      'Cherry Chic',
+      'Juvenil',
+      '17.05',
+      'https://static.fnac-static.com/multimedia/Images/ES/NR/4d/5b/6d/7166797/1540-1.jpg');
