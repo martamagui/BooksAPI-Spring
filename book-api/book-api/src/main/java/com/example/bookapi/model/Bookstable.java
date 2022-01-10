@@ -1,5 +1,6 @@
 package com.example.bookapi.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -12,6 +13,8 @@ public class Bookstable {
     private String autor;
     private String categoria;
     private String precio;
+    //Cuidado con el camelCase en los nombres de las columnas, deben estar en minúsculas
+    @Column(name="imgurl")
     private String imgUrl;
 
     public Bookstable(String titulo, String autor, String categoria, String precio, String imgUrl) {
