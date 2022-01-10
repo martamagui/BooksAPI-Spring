@@ -44,4 +44,12 @@ public class BookService {
             }
         }
     }
+
+    public void deleteBook(String titulo) {
+        if (bookRepository.findBookByTitle(titulo).isPresent()) {
+            bookRepository.deleteById(titulo);
+        } else {
+            throw new IllegalStateException("El libro: " + titulo + " no existe.");
+        }
+    }
 }

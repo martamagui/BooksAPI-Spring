@@ -35,5 +35,8 @@ public class BookController {
         bookService.editBook(titulo, autor, categoria, precio, imgurl);
 
     }
-    
+    @DeleteMapping(path = "{titulo}")
+    public void deleteBook(@PathVariable("titulo") String titulo){
+        bookService.deleteBook(titulo);
+    }
 }
